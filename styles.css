@@ -1,0 +1,135 @@
+@font-face {
+    font-family: "Inter";
+    src:
+        local("Inter"),
+        url("assets/fonts/Inter-VariableFont_slnt,wght.ttf");
+}
+
+:root {
+    --mobile-screen: 375px;
+    --desktop-screen: 1440px;
+    --green-color: hsl(75, 94%, 57%);
+    --white-color: hsl(0, 0%, 100%);
+    --bio-color: hsl(0, 0%, 80%);
+    --grey-color-700: hsl(0, 0%, 20%);
+    --grey-color-800: hsl(0, 0%, 12%);
+    --grey-color-900: hsl(0, 0%, 8%);
+    --font-size-sm: 0.875rem;
+    --font-size-xl: 1.5rem;
+}
+
+body,
+h1,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+    line-height: 1rem;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--grey-color-900);
+}
+
+.card {
+    background-color: var(--grey-color-800);
+    border-radius: 20px;
+    padding: 24px;
+    text-align: center;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+}
+
+.name {
+    color: var(--white-color);
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    margin-top: 32px;
+}
+
+.location {
+    display: block;
+    color: var(--green-color);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.bio {
+    color: var(--bio-color);
+    font-size: var(--font-size-sm);
+    margin-top: 32px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    margin-top: 28px;
+}
+
+.links li {
+    width: fit-content;
+}
+
+
+.links li:first-child a {
+    margin-top: 0;
+}
+
+.link {
+    display: block;
+    color: var(--white-color);
+    font-size: var(--font-size-sm);
+    margin-top: 16px;
+    text-decoration: none;
+    background-color: var(--grey-color-700);
+    padding: 16px 0;
+    border-radius: 10px;
+    width: 280px;
+    font-weight: 600;
+}
+
+
+.link:hover {
+    background-color: var(--green-color);
+    color: var(--grey-color-900);
+    transition: all 0.25s ease-in-out;
+}
+
+.attribution {
+    background-color: var(--grey-color-900);
+    color: var(--white-color);
+    font-size: var(--font-size-sm);
+    text-align: center;
+    padding: 40px 0;
+}
+
+.attribution a {
+    color: var(--green-color);
+    text-decoration: none;
+
+}
+
+@media screen and (min-width: 375px) {
+    .card {
+        padding: 40px;
+    }
+
+    .link {
+        width: 300px;
+    }
+}
